@@ -25,7 +25,7 @@ type Cat struct {
 	Name         string
 	Sound        string
 	NumberOfLegs int
-	HasTais      bool
+	HasTail      bool
 }
 
 func (d *Cat) Says() string {
@@ -50,7 +50,7 @@ func main() {
 	cat.Name = "cat"
 	cat.Sound = "mieuuuu"
 	cat.NumberOfLegs = 4
-	cat.HasTais = true
+	cat.HasTail = true
 
 	Riddle(&cat)
 
