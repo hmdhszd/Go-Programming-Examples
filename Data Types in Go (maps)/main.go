@@ -40,4 +40,24 @@ func main() {
 	fmt.Println(MyMap["Hamid"])
 	fmt.Println(MyMap["NoBody"])
 
+	//---------------------------------------------------------
+
+	NewMap := map[string][]string{
+		`James Bond`:         []string{`First item of James Bond`, `Second Item of James Bond`, `Third Item of James Bond`},
+		`Hamid Hosseinzadeh`: []string{`First item of Hamid Hosseinzadeh`, `Second Item of Hamid Hosseinzadeh`, `Third Item of Hamid Hosseinzadeh`},
+		`Harry Potter`:       []string{`First item of Harry Potter`, `Second Item of Harry Potter`, `Third Item of Harry Potter`},
+	}
+
+	NewMap["New-Item-Of-The-New-Map"] = []string{"1st", "2nd", "3rd", "4th", "5th", "6th", "7th", "8th"}
+
+	for item, value := range NewMap {
+
+		fmt.Printf("\n Item: %v \n \t Value:\n", item)
+
+		for index, val := range value {
+			fmt.Printf("\t \t %v- %v \n", index, val)
+		}
+
+	}
+
 }
