@@ -161,4 +161,77 @@ func main() {
 	}
 
 	fmt.Println(anonymousPerson)
+
+	//------------------------------------------------------
+	//------------------------------------------------------
+	//------------------------------------------------------
+
+	m := map[string]person{
+		"hmdhszd":    p2,
+		p1.firstName: p1,
+	}
+
+	fmt.Println(m["hmdhszd"])
+	fmt.Println(m[p1.firstName])
+
+	for key, value := range m {
+
+		fmt.Printf("\n Key: %v \n \t Value: %v \n", key, value)
+		fmt.Printf("\n \t Value.firstName: %v \n", value.firstName)
+		fmt.Printf("\n \t Value.lastName: %v \n", value.lastName)
+		fmt.Printf("\n \t Value.age: %v \n", value.age)
+		fmt.Printf("\n \t Value.friends: %v \n", value.friends)
+
+		for index, data := range value.friends {
+			fmt.Printf("\n \t\t value.friends %v : %v \n", index, data)
+		}
+
+	}
+
+	//------------------------------------------------------
+	//------------------------------------------------------
+	//------------------------------------------------------
+	// 			"struct" in another "struct"
+
+	type vehicle struct {
+		doors int
+		color string
+	}
+
+	type truck struct {
+		vehicle
+		fourwheel bool
+	}
+
+	type sedan struct {
+		vehicle
+		luxary bool
+	}
+
+	t := truck{
+		vehicle: vehicle{
+			doors: 2,
+			color: "White",
+		},
+		fourwheel: false,
+	}
+
+	s := sedan{
+		vehicle: vehicle{
+			doors: 4,
+			color: "Red",
+		},
+		luxary: true,
+	}
+
+	fmt.Println(t)
+	fmt.Println(t.doors)
+	fmt.Println(t.color)
+	fmt.Println(t.fourwheel)
+
+	fmt.Println(s)
+	fmt.Println(s.doors)
+	fmt.Println(s.color)
+	fmt.Println(s.luxary)
+
 }
