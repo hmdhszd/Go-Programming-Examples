@@ -96,5 +96,69 @@ func main() {
 	fmt.Printf("my car is a %d %s %s", myOtherCar.Year, myOtherCar.Make, myOtherCar.Model)
 
 	//------------------------------------------------------
+	//------------------------------------------------------
+	//------------------------------------------------------
+	//------------------------------------------------------
 
+	type person struct {
+		firstName string
+		lastName  string
+		age       int
+		friends   []string
+	}
+
+	p1 := person{
+		firstName: "James",
+		lastName:  "Bond",
+		age:       20,
+		friends:   []string{"First Freind of P1", "Second Freind of P1"},
+	}
+
+	p2 := person{
+		firstName: "Hamid",
+		lastName:  "Hosseinzadeh",
+		age:       30,
+		friends:   []string{"First Freind of P2", "Second Freind of P2"},
+	}
+
+	type SercetPerson struct {
+		person
+		LicenceToKill bool
+	}
+
+	sa1 := SercetPerson{
+
+		person: person{
+			firstName: "Miss",
+			lastName:  "MoneyPenny",
+			age:       27,
+			friends:   []string{"First Freind of sa1", "Second Freind of sa1"},
+		},
+
+		LicenceToKill: true,
+	}
+
+	fmt.Println(p1.firstName, p1.lastName, p1.age, p1.friends)
+	fmt.Println(p2.firstName, p2.lastName, p2.age, p2.friends)
+
+	fmt.Println(sa1.firstName, sa1.lastName, sa1.age, sa1.friends, sa1.LicenceToKill)
+	fmt.Println(sa1.person.firstName, sa1.person.lastName, sa1.person.age, sa1.person.friends, sa1.LicenceToKill)
+
+	//------------------------------------------------------
+	//------------------------------------------------------
+	//------------------------------------------------------
+	//-------------------Anonymous Struct-------------------
+	//     when you want to use a STRUCT only in one area
+
+	anonymousPerson := struct {
+		firstName string
+		lastName  string
+		age       int
+	}{
+		firstName: "Nobody's FirstName",
+		lastName:  "Nobody's LastName",
+		age:       100,
+	}
+
+	fmt.Println(anonymousPerson)
 }
