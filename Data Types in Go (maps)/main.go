@@ -1,5 +1,7 @@
 package main
 
+import "fmt"
+
 func main() {
 	intMap := make(map[string]int)
 
@@ -25,4 +27,17 @@ func main() {
 	} else {
 		println(el, "is not in map")
 	}
+
+	//---------------------------------------------------------
+
+	MyMap := map[string]int{
+		"Hamid":           30,
+		"James":           32,
+		"Miss MoneyPenny": 27,
+	}
+
+	fmt.Println(MyMap)
+	fmt.Println(MyMap["Hamid"])
+	fmt.Println(MyMap["NoBody"])
+
 }
