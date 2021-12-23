@@ -18,6 +18,17 @@ func (a *Animal) HowManyLegs() {
 
 func main() {
 
+
+	//-------------------------------------------------
+	//-------------------------------------------------
+
+	ii := []int{3,5,2,6,7,2,4,7,3,3,7}
+
+	s := sum(ii...)
+
+	fmt.Println(s)
+
+	//-------------------------------------------------
 	//-------------------------------------------------
 
 	z := addTwoNumbers(2, 4)
@@ -65,3 +76,15 @@ func sumManyNumbers(nums ...int) int {
 
 	return total
 }
+
+
+func sum(x ...int) int {
+
+	total := 0
+
+	for _,v := range x {
+		total += v
+	}
+
+	return total
+	}
