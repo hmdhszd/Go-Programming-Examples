@@ -45,7 +45,7 @@ func main() {
 
 	s := `[{"Firstname":"James","Lastname":"Bond","Age":99},{"Firstname":"Hamid","Lastname":"Hosseinzadeh","Age":30}]`
 
-	type Person []struct {
+	type Person struct {
 		Firstname string `json:"Firstname"`
 		Lastname  string `json:"Lastname"`
 		Age       int    `json:"Age"`
