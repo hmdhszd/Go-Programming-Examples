@@ -15,7 +15,7 @@ func task1() {
 
 func task2() {
 	time.Sleep(2 * time.Second)
-	chan1 <- "two"
+	chan2 <- "two"
 }
 
 func main() {
